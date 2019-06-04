@@ -17,14 +17,14 @@ body {
     margin-bottom: 50px;
     background: url("../images/lined_paper.png");
     text-align: center;
-    border: 5px solid black;
+    border: 5px solid darkgray;
     padding: 20px;
 }
 
 #headerJumbotron {
-    font-family: 'Special Elite', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid darkgray;
     
 }
 
@@ -37,7 +37,7 @@ body {
 #navbar {
     background-image: url("../images/chalkboard.jpg");
 	padding: 10px 30px 10px 30px;
-	font-family: 'Special Elite', cursive;
+	font-family: Arial, Helvetica, sans-serif;
 	overflow: hidden;
 }
 
@@ -63,7 +63,7 @@ body {
 }
 
 .card-body {
-    border: 2px solid black;
+    border: 2px solid darkgray;
 }
 
 .headlineLink {
@@ -73,11 +73,11 @@ body {
 
 .headlineLink:hover {
     text-decoration: none;
-    color: blue
+    color: gray;
 }
 
 p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .articleImage {
@@ -91,13 +91,13 @@ p {
 .saveArticleButton {
     margin-top: 10px;
     padding: 10px;
-    font-family: 'Special Elite', cursive;
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 .modal-header {
     background-image: url(../images/chalkboard.jpg);
     color: white;
-    font-family: 'Special Elite', cursive;
+    font-family: Georgia, Times, 'Times New Roman', serif;
 }
 
 .buttonRow {
@@ -120,5 +120,5 @@ p {
 }
 
 .noteCardBody {
-    color: black
+    color: darkgray;
 }
