@@ -19,6 +19,8 @@
         <a class="nav-link navLink" href="/saved">Saved Articles</a>
         </li>
     </ul>
+    
+    <button type="button" class="btn btn-primary" id="scrapeArticlesButton">Scrape New Articles</button>
 
 </nav>
 
@@ -29,7 +31,7 @@
         </div>
 
         <div class="col-10 articleColumn">
-
+            
             {{#each articles}}
 
                 <div class="card">
@@ -43,27 +45,17 @@
                             </div>
 
                             <div class="col-8">
-                                <p>{{summary}}</p>
+                                <p>{{summary}}{{date}}</p>
                             </div>
 
                             <div class="col-2 buttonColumn">
-                                <div class="row buttonRow">
-                                    <div class="col-12">
-                                          <button type="button" class="btn btn-primary deleteSavedArticleButton" data-id={{id}}>Delete Article</button>
-                                    </div>
-                                </div>
-                                <div class="row buttonRow">
-                                    <div class="col-12">
-                                          <button type="button" class="btn btn-primary addNoteButton" data-id={{id}} data-notes={{notes}}>Add Note</button>
-                                    </div>
-                                </div>
+                                <button type="button" class="btn btn-primary saveArticleButton" data-id={{id}}>Save Article</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
             {{/each}}
-
         </div>
 
         <div class="col-1">
@@ -72,36 +64,34 @@
     </div>
 </div>
 
-<div class="modal fade" id="articleDeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<div class="modal fade" id="scrapeArticlesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title articleDeleteTitle" >Success!</h5>
+        <h5 class="modal-title articlesScrapedTitle" >Articles Scraped</h5>
       </div>
-      <div class="modal-body articleDeleteBody">
-
+      <div class="modal-body articlesScrapedBody">
+        
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary deleteSavedArticleModalButton" id="deleteSavedArticleModalButton" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" id="closeScrapeButton" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="noteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="articleSavedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header noteModalHeader">
-        {{!-- <h5 class="modal-title noteModalTitle" >Notes:</h5>
-        <br> --}}
+      <div class="modal-header">
+        <h5 class="modal-title articleSavedTitle" >Success!</h5>
       </div>
-      <div class="modal-body noteModalBody">
+      <div class="modal-body articleSavedBody">
         
       </div>
-      <button class='saveNoteButton'>Save Note</button>
-      <div class='alertDiv'></div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" id="closeArticleButton" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
