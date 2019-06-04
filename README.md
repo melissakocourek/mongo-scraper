@@ -2,7 +2,7 @@
 
 ## Overview: 
 I created a web app that lets users leave comments on the latest news. However, I did not actually write any articles; instead, I used Mongoose and Cheerio packages along with MongoDB to scrape news from another site and store it in the apps database.
-Check out the running app on Heroku here: https://git.heroku.com/mighty-tundra-38351.git
+Check out the running app on Heroku here: https://mighty-tundra-38351.herokuapp.com
 
 ## Installation Instructions: 
 1. Fork this repo and clone the forked repo to your computer. You will need node.js installed on your system.
